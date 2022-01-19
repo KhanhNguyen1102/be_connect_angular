@@ -58,14 +58,13 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
   }
   submit() {
-    const city = this.cityForm.value;
-    const country = {
-      id : +city.country
+    const city1 = this.cityForm.value;
+    const country1 = {
+      id : +city1.country
     }
-    city.country=country;
-    console.log(city);
-    this.cityService.saveCity(city).subscribe(rs =>{
-      console.log("thêm thành công")
+    city1.country=country1;
+    this.cityService.updateCity(city1,city1.id).subscribe(result1 =>{
+      console.log("sửa thành công")
     });
     this.cityForm.reset();
   }

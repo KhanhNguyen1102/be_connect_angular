@@ -21,4 +21,7 @@ export class CityService {
   deleteCity(id:any){
     return this.httpClient.delete<City>(API_URl+`/${id}`)
   }
+  updateCity(city:City,id:any):Observable<City>{
+    return this.httpClient.put<City>(API_URl+`/${id}`,city)
+  }
 }

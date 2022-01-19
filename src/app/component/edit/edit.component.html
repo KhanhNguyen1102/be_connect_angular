@@ -17,8 +17,7 @@
       <th scope="row">Quốc gia :</th>
       <th colspan="3" scope="row">
         <select  id="country" formControlName="country">
-          <option value="default">--Select a country--</option>
-          <option [selected]="option === 47" *ngFor="let country of countries" value="{{country.id}}">{{country.name}}</option>
+          <option *ngFor="let country of countries" value="{{country.id}}">{{country.name}}</option>
         </select>
       </th>
     </tr>
