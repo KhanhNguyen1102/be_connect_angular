@@ -20,7 +20,7 @@
       <th scope="row">{{i+1}}</th>
       <td><span id="cityName" (click)="showDetail(city.id)">{{city.name}}</span></td>
       <td>{{city.country?.name}}</td>
-      <td><span>Chỉnh sửa</span>| <span (click)="deleteCity(city.id)">Xóa</span></td>
+      <td><span (click)="showFormEdit(city.id)">Chỉnh sửa</span>| <span (click)="deleteCity(city.id)">Xóa</span></td>
     </tr>
   </ng-container>
   </tbody>

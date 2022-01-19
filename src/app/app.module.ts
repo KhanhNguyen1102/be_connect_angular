@@ -8,13 +8,15 @@ import { ListCityComponent } from './component/list-city/list-city.component';
 import { CityDetailComponent } from './component/city-detail/city-detail.component';
 import { CreateCityComponent } from './component/create-city/create-city.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { EditComponent } from './component/edit/edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListCityComponent,
     CityDetailComponent,
-    CreateCityComponent
+    CreateCityComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

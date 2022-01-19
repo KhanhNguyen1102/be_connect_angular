@@ -39,4 +39,7 @@ export class ListCityComponent implements OnInit {
   showFormCreate():void{
     this.router.navigate(["create"])
   }
+  showFormEdit(id:any):void{
+    this.router.navigate(["edit/" +id])
+  }
 }

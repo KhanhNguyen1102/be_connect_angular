@@ -11,18 +11,6 @@ import {Observable} from "rxjs";
   styleUrls: ['./city-detail.component.css']
 })
 export class CityDetailComponent implements OnInit {
-  // city :City ={
-  //   id:1,
-  //   area:1,
-  //   description:'',
-  //   gdp:1,
-  //   name:'',
-  //   population:1,
-  //   country: {
-  //     id :1,
-  //     name:'',
-  //   }
-  // }
   city!:City;
   id!:number;
   constructor(private cityService : CityService,private router:Router,private activatedRoute: ActivatedRoute) {
