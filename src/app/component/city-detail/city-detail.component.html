@@ -1,0 +1,37 @@
+<table style="" class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th style="text-align: center" colspan="4" scope="col">Thành phố {{city.name}} </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th colspan="2" scope="row">Thành phố {{city.name}}</th>
+    <td style="text-align: right" colspan="2"><button (click)="back()" >Xem danh sách thành phố</button></td>
+  </tr>
+  <tr>
+    <th colspan="4" scope="row">Tên : {{city.name}} </th>
+  </tr>
+  <tr>
+    <th colspan="4" scope="row">Quốc gia : {{city.country?.name}} </th>
+  </tr>
+  <tr>
+    <th colspan="4" scope="row">Diện tích : {{city.area}} km2 </th>
+  </tr>
+  <tr>
+    <th colspan="4" scope="row">Dân số : {{city.population}} người </th>
+  </tr>
+  <tr>
+    <th colspan="4" scope="row">GDP : {{city.gdp}} ngàn $ </th>
+  </tr>
+  <tr>
+    <th colspan="4" scope="row">Giới thiệu: </th>
+  </tr>
+  <tr>
+    <th colspan="4" scope="row">{{city.description}} </th>
+  </tr>
+  <tr>
+    <th style="text-align: right" colspan="4" scope="row"><button >Chỉnh sửa</button>&ensp;&ensp;<button >Xóa</button></th>
+  </tr>
+  </tbody>
+</table>

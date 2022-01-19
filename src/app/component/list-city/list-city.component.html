@@ -1,0 +1,27 @@
+<table style="" class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th style="text-align: center" colspan="4" scope="col">Danh sách thành phố</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th colspan="2" scope="row">DANH SÁCH THÀNH PHỐ</th>
+    <td style="text-align: right" colspan="2"><button (click)="showFormCreate()" >Thêm thành phố</button></td>
+  </tr>
+  <tr>
+    <th scope="row">#</th>
+    <td>Thành phố</td>
+    <td>Quốc gia</td>
+    <td>Hành động</td>
+  </tr>
+  <ng-container *ngFor="let city of cities; index as i">
+    <tr>
+      <th scope="row">{{i+1}}</th>
+      <td><span id="cityName" (click)="showDetail(city.id)">{{city.name}}</span></td>
+      <td>{{city.country?.name}}</td>
+      <td><span>Chỉnh sửa</span>| <span (click)="deleteCity(city.id)">Xóa</span></td>
+    </tr>
+  </ng-container>
+  </tbody>
+</table>
