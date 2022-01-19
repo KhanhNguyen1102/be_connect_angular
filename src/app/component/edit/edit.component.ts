@@ -24,18 +24,17 @@ export class EditComponent implements OnInit {
     gdp: new FormControl(''),
     description: new FormControl('')
   });
+
   constructor(private cityService : CityService,private router:Router,private activatedRoute: ActivatedRoute,private countryService :CountryService) {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       // @ts-ignore
       this.id = +paramMap.get('id');
-      console.log(this.id);
       this.cityService.findById(this.id).subscribe(result => {
-        console.log(result);
         this.city = result;
         this.cityForm = new FormGroup({
           id: new FormControl(result.id),
           name: new FormControl(result.name),
-          country: new FormControl(result.country),
+          country: new FormControl(result.country?.id),
           area: new FormControl(result.area),
           population: new FormControl(result.population),
           gdp: new FormControl(result.gdp),
