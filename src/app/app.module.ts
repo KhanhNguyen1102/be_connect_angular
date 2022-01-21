@@ -9,6 +9,9 @@ import { CityDetailComponent } from './component/city-detail/city-detail.compone
 import { CreateCityComponent } from './component/create-city/create-city.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { EditComponent } from './component/edit/edit.component';
+import {AngularFireStorageModule} from "@angular/fire/compat/storage";
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { EditComponent } from './component/edit/edit.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig,'cloud')
   ],
   providers: [],
   bootstrap: [AppComponent]
