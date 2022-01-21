@@ -40,6 +40,8 @@ export class EditComponent implements OnInit {
           gdp: new FormControl(result.gdp),
           description: new FormControl(result.description)
         });
+        // this.cityForm.setValue(result)
+        // Hoặc là setValue() cho cityForm
         this.getListCountry();
       },error => {
         console.log(error);
